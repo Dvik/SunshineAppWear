@@ -94,7 +94,6 @@ public class SunshineWearListener extends WearableListenerService
     }
 
     private byte[][] getCurrentForecastData(){
-        // Get today's data from the ContentProvider
         String location = Utility.getPreferredLocation(this);
         Uri weatherForLocationUri = WeatherContract.WeatherEntry.buildWeatherLocationWithStartDate(
                 location, System.currentTimeMillis());
